@@ -10,13 +10,6 @@ After creating the first plain hello world with Payara Micro and Platform.sh, it
 On this point, we'll create a REST application this time connect to a relational database; we have support to [MySQL, Maria](https://docs.platform.sh/configuration/services/mysql.html) and [PostgreSQL](https://docs.platform.sh/configuration/services/postgresql.html), but on this application we'll use [PostgreSQL](https://docs.platform.sh/configuration/services/postgresql.html).
 
 
-## How to Execute
-
-```shell
-mvn clean package payara-micro:bundle
-java -jar -Xmx512m -Dserver.host=localhost -Dserver.database=fishes -Dserver.user=postgres -Dserver.password=password target/microprofile-microbundle.jar 
-```
-
 ## Execute
 
 ```shell 

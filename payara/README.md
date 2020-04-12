@@ -10,22 +10,6 @@ After creating the first plain hello world with Payara Micro and Platform.sh, it
 On this point, we'll create a REST application this time connect to a relational database; we have support to [MySQL, Maria](https://docs.platform.sh/configuration/services/mysql.html) and [PostgreSQL](https://docs.platform.sh/configuration/services/postgresql.html), but on this application we'll use [PostgreSQL](https://docs.platform.sh/configuration/services/postgresql.html).
 
 
-
-
-
-## Using Docker
-
-![Docker](https://www.docker.com/sites/default/files/horizontal_large.png)
-
-1. Install docker: https://www.docker.com/
-1. https://hub.docker.com/_/postgres
-1. Run docker command
-1. Run PostgreSQL: verify PostgreSQL image name with the command `docker images`, it can be mongodb or mongo, and then execute this command:
-   * `docker run --name postgres-instance -p 5432:5432 -e POSTGRES_PASSWORD=password -e POSTGRES_DB=fishes -d postgres`
-
-![Database](https://d1q6f0aelx0por.cloudfront.net/product-logos/library-postgres-logo.png)
-
-
 ## How to Execute
 
 ```shell

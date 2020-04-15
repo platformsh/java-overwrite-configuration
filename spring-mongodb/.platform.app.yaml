@@ -32,7 +32,7 @@ web:
            export PASSWORD=`echo $PLATFORM_RELATIONSHIPS|base64 -d|jq -r ".database[0].password"`
            export HOST=`echo $PLATFORM_RELATIONSHIPS|base64 -d|jq -r ".database[0].host"`
            export DATABASE=`echo $PLATFORM_RELATIONSHIPS|base64 -d|jq -r ".database[0].path"`
-           java -jar -Xmx512m \
+           java -jar -Xmx$(jq .info.limits.memory /run/config.json)m -XX:+ExitOnOutOfMemoryError \
            -Dspring.data.mongodb.database=$DATABASE \
            -Dspring.data.mongodb.host=$HOST \
            -Dspring.data.mongodb.username=$USER \
